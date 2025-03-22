@@ -3,24 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Server Setup Successful!</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    nav { background: #333; padding: 10px; }
-    nav a { color: white; margin: 0 10px; text-decoration: none; }
-    h1 { text-align: center; margin-top: 20px; }
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav a:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-5px);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/about.html">About</a>
-    <a href="/services.html">Services</a>
-    <a href="/contact.html">Contact</a>
-    <a href="/gallery.html">Gallery</a>
-    <a href="/blog.html">Blog</a>
-  </nav>
-  <h1>Welcome to the Home Page</h1>
-  <p>This is the home page of our simple website. Feel free to explore other pages using the navigation above.</p>
+  <div class="container">
+    <h1>🎉 Server Setup Successful! 🎉</h1>
+    <p>
+      Congratulations! Your server is up and running on AWS EC2. 
+      This page confirms that your Node.js and Express setup is working perfectly. 
+      Feel free to explore the other pages using the navigation below.
+    </p>
+  </div>
 </body>
 </html>
